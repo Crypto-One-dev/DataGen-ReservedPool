@@ -11,7 +11,7 @@ contract DataGen is Ownable, IERC20 {
     mapping (address => mapping (address => uint256)) private _allowances;
 
     uint256 private _totalSupply;
-    uint256 private _maxSupply = 30000000 * (10 ** 20);
+    uint256 private _maxSupply = 30000000 * (10 ** 18);
 
     string private _name="DataGen";
     string private _symbol="#DG";
@@ -27,8 +27,8 @@ contract DataGen is Ownable, IERC20 {
      */
     constructor () {
         // Initial Minting to Owner
-        _balances[msg.sender] = 15000000 * (10 ** 20);
-        _totalSupply = 15000000 * (10 ** 20);
+        _balances[msg.sender] = 15000000 * (10 ** 18);
+        _totalSupply = 15000000 * (10 ** 18);
     }
 
     /**
@@ -51,7 +51,7 @@ contract DataGen is Ownable, IERC20 {
      * For example, if `decimals` equals `2`, a balance of `505` tokens should
      * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
-     * Tokens usually opt for a value of 20, imitating the relationship between
+     * Tokens usually opt for a value of 18, imitating the relationship between
      * Ether and Wei. This is the value {ERC20} uses, unless this function is
      * overloaded;
      *
@@ -60,7 +60,7 @@ contract DataGen is Ownable, IERC20 {
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() external pure returns (uint8) {
-        return 20;
+        return 18;
     }
 
     /**

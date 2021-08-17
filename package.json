@@ -6,7 +6,7 @@
     "matic": "truffle migrate --network matic --reset",
     "development": "truffle migrate --network development --reset",
     "compile": "truffle compile --network bsctestnet",
-    "verify": "truffle run verify DataGen ReservedPool --network matic",
+    "verify": "truffle run verify DataGen ReservedPool CoFounderPool --network matic",
     "test": "npx builder test"
   },
   "dependencies": {
